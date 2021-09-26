@@ -10,7 +10,11 @@
 		EA5C613B26FF4E6800123417 /* TrumpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C613A26FF4E6800123417 /* TrumpViewController.swift */; };
 		EA5C614026FF4F3700123417 /* TrumpCitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C613F26FF4F3700123417 /* TrumpCitation.swift */; };
 		EA5C614326FF4F8100123417 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C614226FF4F8100123417 /* NetworkManager.swift */; };
-		EA5C6147270098C300123417 /* CurrencyExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C6146270098C300123417 /* CurrencyExchangeViewController.swift */; };
+		EA5C614927009B7200123417 /* CurrencyRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C614827009B7200123417 /* CurrencyRate.swift */; };
+		EA5C614B2700BC4400123417 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C614A2700BC4400123417 /* CurrencyCell.swift */; };
+		EA5C614E2700C79800123417 /* CurrencySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C614D2700C79700123417 /* CurrencySettingsViewController.swift */; };
+		EA5C61502700D3A200123417 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C614F2700D3A200123417 /* DataManager.swift */; };
+		EA5C6157270108CD00123417 /* ExchangeRatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C6156270108CD00123417 /* ExchangeRatesTableViewController.swift */; };
 		EA82AD3326FE314800E5B1AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82AD3226FE314800E5B1AA /* AppDelegate.swift */; };
 		EA82AD3526FE314800E5B1AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82AD3426FE314800E5B1AA /* SceneDelegate.swift */; };
 		EA82AD3A26FE314800E5B1AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA82AD3826FE314800E5B1AA /* Main.storyboard */; };
@@ -22,7 +26,11 @@
 		EA5C613A26FF4E6800123417 /* TrumpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrumpViewController.swift; sourceTree = "<group>"; };
 		EA5C613F26FF4F3700123417 /* TrumpCitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrumpCitation.swift; sourceTree = "<group>"; };
 		EA5C614226FF4F8100123417 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		EA5C6146270098C300123417 /* CurrencyExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyExchangeViewController.swift; sourceTree = "<group>"; };
+		EA5C614827009B7200123417 /* CurrencyRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRate.swift; sourceTree = "<group>"; };
+		EA5C614A2700BC4400123417 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		EA5C614D2700C79700123417 /* CurrencySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySettingsViewController.swift; sourceTree = "<group>"; };
+		EA5C614F2700D3A200123417 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		EA5C6156270108CD00123417 /* ExchangeRatesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesTableViewController.swift; sourceTree = "<group>"; };
 		EA82AD2F26FE314800E5B1AA /* Swiftbook_HW9_Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftbook_HW9_Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA82AD3226FE314800E5B1AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA82AD3426FE314800E5B1AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +54,8 @@
 		EA5C613C26FF4E7000123417 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EA5C6146270098C300123417 /* CurrencyExchangeViewController.swift */,
+				EA5C6156270108CD00123417 /* ExchangeRatesTableViewController.swift */,
+				EA5C614D2700C79700123417 /* CurrencySettingsViewController.swift */,
 				EA5C613A26FF4E6800123417 /* TrumpViewController.swift */,
 			);
 			path = "View Controllers";
@@ -66,6 +75,7 @@
 			children = (
 				EA82AD3D26FE314A00E5B1AA /* LaunchScreen.storyboard */,
 				EA82AD3826FE314800E5B1AA /* Main.storyboard */,
+				EA5C61512700D3AF00123417 /* Managers */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -73,10 +83,27 @@
 		EA5C614126FF4F5F00123417 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EA5C614827009B7200123417 /* CurrencyRate.swift */,
 				EA5C613F26FF4F3700123417 /* TrumpCitation.swift */,
-				EA5C614226FF4F8100123417 /* NetworkManager.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EA5C614C2700BC4800123417 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EA5C614A2700BC4400123417 /* CurrencyCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EA5C61512700D3AF00123417 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EA5C614F2700D3A200123417 /* DataManager.swift */,
+				EA5C614226FF4F8100123417 /* NetworkManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		EA82AD2626FE314800E5B1AA = {
@@ -98,6 +125,7 @@
 		EA82AD3126FE314800E5B1AA /* Swiftbook_HW9_Networking */ = {
 			isa = PBXGroup;
 			children = (
+				EA5C614C2700BC4800123417 /* Cells */,
 				EA82AD4026FE314A00E5B1AA /* Info.plist */,
 				EA5C614126FF4F5F00123417 /* Models */,
 				EA5C613E26FF4EE000123417 /* Storyboards */,
@@ -179,11 +207,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5C614B2700BC4400123417 /* CurrencyCell.swift in Sources */,
+				EA5C61502700D3A200123417 /* DataManager.swift in Sources */,
+				EA5C6157270108CD00123417 /* ExchangeRatesTableViewController.swift in Sources */,
+				EA5C614E2700C79800123417 /* CurrencySettingsViewController.swift in Sources */,
 				EA82AD3326FE314800E5B1AA /* AppDelegate.swift in Sources */,
+				EA5C614927009B7200123417 /* CurrencyRate.swift in Sources */,
 				EA5C614026FF4F3700123417 /* TrumpCitation.swift in Sources */,
 				EA5C614326FF4F8100123417 /* NetworkManager.swift in Sources */,
 				EA82AD3526FE314800E5B1AA /* SceneDelegate.swift in Sources */,
-				EA5C6147270098C300123417 /* CurrencyExchangeViewController.swift in Sources */,
 				EA5C613B26FF4E6800123417 /* TrumpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
