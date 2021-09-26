@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gAM-kE-FDM">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Currency-->
+        <scene sceneID="a3N-98-Zow">
+            <objects>
+                <viewController id="mdN-0t-WKB" customClass="CurrencyExchangeViewController" customModule="Swiftbook_HW9_Networking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kEi-Ia-GFQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Udy-DV-KYg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="1BG-zN-zJH">
+                                        <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1BG-zN-zJH" id="Qda-ar-gfc">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="mdN-0t-WKB" id="KT5-Lh-gze"/>
+                                    <outlet property="delegate" destination="mdN-0t-WKB" id="elv-O8-3cF"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tPn-Om-pn7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="dWH-Q3-mja">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="WiF-hE-tCN"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fu5-hP-Slw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Udy-DV-KYg" firstAttribute="top" secondItem="Fu5-hP-Slw" secondAttribute="top" id="RXL-0L-1gD"/>
+                            <constraint firstItem="Fu5-hP-Slw" firstAttribute="trailing" secondItem="Udy-DV-KYg" secondAttribute="trailing" id="VmS-ib-bqk"/>
+                            <constraint firstItem="Udy-DV-KYg" firstAttribute="leading" secondItem="Fu5-hP-Slw" secondAttribute="leading" id="lK5-Wk-KH7"/>
+                            <constraint firstItem="Fu5-hP-Slw" firstAttribute="bottom" secondItem="Udy-DV-KYg" secondAttribute="bottom" id="las-gb-OKe"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Currency" image="dollarsign.circle.fill" catalog="system" id="Cam-UQ-s7P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7H-k8-12E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320" y="168"/>
+        </scene>
+        <!--Mr. Trump-->
+        <scene sceneID="H8S-wu-XmC">
+            <objects>
+                <viewController id="gb5-wz-GYX" customClass="TrumpViewController" customModule="Swiftbook_HW9_Networking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="736-Yr-j3u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="FKZ-uT-zhC">
+                                <rect key="frame" x="30" y="189.5" width="260" height="205"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What`s you name?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ik7-zZ-gPE">
+                                        <rect key="frame" x="55.5" y="0.0" width="149.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WK9-kl-Ttw">
+                                        <rect key="frame" x="83.5" y="67" width="93" height="31"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Ask Trump"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="askTrumpButtonPressed" destination="gb5-wz-GYX" eventType="touchUpInside" id="3Mp-dl-wd6"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mr. Trump's thoughts on you:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xCE-7n-47w">
+                                        <rect key="frame" x="18.5" y="131" width="223" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kKv-Ta-WSl">
+                                        <rect key="frame" x="109.5" y="184.5" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Z0B-9s-8a5">
+                                <rect key="frame" x="100" y="40" width="120" height="109.5"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7zm-N9-f9t"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="7zm-N9-f9t" firstAttribute="trailing" secondItem="FKZ-uT-zhC" secondAttribute="trailing" constant="30" id="IVa-9j-GUB"/>
+                            <constraint firstItem="Z0B-9s-8a5" firstAttribute="centerX" secondItem="736-Yr-j3u" secondAttribute="centerX" id="PGG-ut-E9E"/>
+                            <constraint firstItem="Z0B-9s-8a5" firstAttribute="height" secondItem="736-Yr-j3u" secondAttribute="height" multiplier="0.211268" id="Q8D-Xh-kN3"/>
+                            <constraint firstItem="FKZ-uT-zhC" firstAttribute="leading" secondItem="7zm-N9-f9t" secondAttribute="leading" constant="30" id="a5M-ja-HC6"/>
+                            <constraint firstItem="FKZ-uT-zhC" firstAttribute="centerX" secondItem="736-Yr-j3u" secondAttribute="centerX" id="cFm-oP-xkI"/>
+                            <constraint firstItem="FKZ-uT-zhC" firstAttribute="top" secondItem="Z0B-9s-8a5" secondAttribute="bottom" constant="40" id="uHD-RP-nJb"/>
+                            <constraint firstItem="Z0B-9s-8a5" firstAttribute="top" secondItem="7zm-N9-f9t" secondAttribute="top" constant="40" id="vaD-Wr-rt6"/>
+                            <constraint firstItem="Z0B-9s-8a5" firstAttribute="width" secondItem="736-Yr-j3u" secondAttribute="width" multiplier="0.375" id="zXA-hW-AMY"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mr. Trump" image="person.circle.fill" catalog="system" id="7yh-ml-beP"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="Ik7-zZ-gPE" id="cK9-zp-Q1t"/>
+                        <outlet property="quoteTextField" destination="kKv-Ta-WSl" id="ICR-ft-xZ0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x9C-Ft-LXf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="318.75" y="-512.32394366197184"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Zmv-lK-Crg">
+            <objects>
+                <tabBarController id="gAM-kE-FDM" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="6kf-0Y-ggW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gb5-wz-GYX" kind="relationship" relationship="viewControllers" id="Nzf-BZ-JZU"/>
+                        <segue destination="mdN-0t-WKB" kind="relationship" relationship="viewControllers" id="PBE-GQ-hls"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VJ4-Wz-xsl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-571" y="-136"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="logo" width="1200" height="1200"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
