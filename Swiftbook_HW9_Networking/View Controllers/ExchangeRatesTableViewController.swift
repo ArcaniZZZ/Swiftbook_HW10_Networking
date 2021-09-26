@@ -10,7 +10,7 @@ import UIKit
 class ExchangeRatesTableViewController: UITableViewController {
     
     // MARK: - Private Properties
-    var currencies: [String: Valute] = [:]
+    let currencyList = CurrencyList.list
     var currencyData: CurrencyInfo!
 
     override func viewDidLoad() {
@@ -20,13 +20,13 @@ class ExchangeRatesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        currencies.count
+        currencyList.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CurrencyCell", for: indexPath) as! CurrencyCell
-        let currency = CurrencyList.list[indexPath.row]
+        let currency = currencyList[indexPath.row]
         cell.configure(with: currencyData, for: currency)
         return cell
     }

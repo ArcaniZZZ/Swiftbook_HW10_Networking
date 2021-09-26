@@ -12,7 +12,7 @@
         <!--Root View Controller-->
         <scene sceneID="h0s-b4-xwd">
             <objects>
-                <tableViewController id="HU6-3N-BXz" sceneMemberID="viewController">
+                <tableViewController id="HU6-3N-BXz" customClass="ExchangeRatesTableViewController" customModule="Swiftbook_HW9_Networking" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bSd-wh-x4e">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
