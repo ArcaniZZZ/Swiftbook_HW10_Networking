@@ -10,37 +10,34 @@ import UIKit
 class ExchangeRatesTableViewController: UITableViewController {
     
     // MARK: - Private Properties
-    var currencies: [String: Valute] = [:]
-    var currencyData: CurrencyInfo!
-
+    var exchangeRates: ExchangeRates?
+    let list = ["USD", "EUR", "CHF", "GBP", "JPY"]
+    
+    // MARK: - Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchCurrency()
     }
-
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        currencies.count
+        list.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CurrencyCell", for: indexPath) as! CurrencyCell
-        let currency = CurrencyList.list[indexPath.row]
-        cell.configure(with: currencyData, for: currency)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CurrencyCell", for: indexPath)
+        var content = cell.defaultContentConfiguration()
+        content.text = list[indexPath.row]
+        if let rate = exchangeRates?.Valute[list[indexPath.row]]?.Value {
+            content.secondaryText = String(rate)
+        } else {
+            content.text = "No data"
+        }
+        cell.contentConfiguration = content
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    // MARK: - Private Properties
     private func fetchCurrency() {
         guard let url = URL(string: "https://www.cbr-xml-daily.ru/daily_json.js") else { return }
         
@@ -49,23 +46,13 @@ class ExchangeRatesTableViewController: UITableViewController {
                 return
             }
             do {
-                self.currencyData = try JSONDecoder().decode(CurrencyInfo.self, from: data)
-                print("Success")
+                self.exchangeRates = try JSONDecoder().decode(ExchangeRates.self, from: data)
                 DispatchQueue.main.async {
-                    self.currencies = self.currencyData.Valute
                     self.tableView.reloadData()
                 }
             } catch let error {
                 print(error.localizedDescription)
             }
         }.resume()
-    }
-}
-
-
-extension ExchangeRatesTableViewController: CurrencySettingsViewControllerDelegate {
-    func addCurrency(currency: String) {
-        CurrencyList.list.append(currency)
-        tableView.reloadData()
     }
 }

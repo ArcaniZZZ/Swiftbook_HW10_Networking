@@ -7,16 +7,11 @@
 
 import Foundation
 
-// MARK: - Currency Details
-struct CurrencyInfo: Codable {
+
+struct ExchangeRates: Decodable {
     let Valute: [String: Valute]
 }
 
-// MARK: - Valute
-struct Valute: Codable {
-    let CharCode: String
+struct Valute: Decodable {
     let Value: Double
-    var valueString: String {
-        String(format: "%0.2f", Value)
-    }
 }

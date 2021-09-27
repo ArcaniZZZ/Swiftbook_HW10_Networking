@@ -14,7 +14,6 @@ class TrumpViewController: UIViewController {
     @IBOutlet var quoteTextField: UILabel!
     
     // MARK: - Private Properties
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         quoteTextField.text = "Waiting for Mr. Trump"
@@ -41,7 +40,6 @@ class TrumpViewController: UIViewController {
             } catch let error {
                 print(error.localizedDescription)
             }
-            
         }.resume()
     }
 }
