@@ -33,7 +33,7 @@
                             <outlet property="delegate" destination="HU6-3N-BXz" id="HD8-Ox-FER"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" image="dollarsign.circle.fill" catalog="system" id="Gym-Ok-YE2"/>
+                    <tabBarItem key="tabBarItem" title="Exchange Rates" image="dollarsign.circle.fill" catalog="system" id="Gym-Ok-YE2"/>
                     <navigationItem key="navigationItem" title="Root View Controller" id="o0t-u8-bYP">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="sRV-Xv-Phg"/>
                     </navigationItem>
