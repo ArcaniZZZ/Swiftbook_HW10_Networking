@@ -16,7 +16,7 @@ class ExchangeRatesTableViewController: UITableViewController {
     // MARK: - Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchCurrency()
+        NetworkManager.
     }
     
     // MARK: - Table view data source
@@ -28,7 +28,7 @@ class ExchangeRatesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CurrencyCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
         content.text = list[indexPath.row]
-        if let rate = exchangeRates?.Valute[list[indexPath.row]]?.Value {
+        if let rate = exchangeRates?.valute[list[indexPath.row]]?.value {
             content.secondaryText = String(rate)
         } else {
             content.text = "No data"

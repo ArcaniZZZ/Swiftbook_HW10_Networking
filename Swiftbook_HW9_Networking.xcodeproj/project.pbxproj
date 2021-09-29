@@ -16,6 +16,7 @@
 		EA82AD3A26FE314800E5B1AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA82AD3826FE314800E5B1AA /* Main.storyboard */; };
 		EA82AD3C26FE314A00E5B1AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA82AD3B26FE314A00E5B1AA /* Assets.xcassets */; };
 		EA82AD3F26FE314A00E5B1AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA82AD3D26FE314A00E5B1AA /* LaunchScreen.storyboard */; };
+		EABBF51A2704F2CC007C80B8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBF5192704F2CC007C80B8 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EA82AD3B26FE314A00E5B1AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA82AD3E26FE314A00E5B1AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA82AD4026FE314A00E5B1AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EABBF5192704F2CC007C80B8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		EA82AD3126FE314800E5B1AA /* Swiftbook_HW9_Networking */ = {
 			isa = PBXGroup;
 			children = (
+				EABBF5182704F2B0007C80B8 /* Services */,
 				EA5C614C2700BC4800123417 /* Cells */,
 				EA5C614126FF4F5F00123417 /* Models */,
 				EA5C613E26FF4EE000123417 /* Storyboards */,
@@ -114,6 +117,14 @@
 				EA5C613D26FF4EBC00123417 /* App */,
 			);
 			path = Swiftbook_HW9_Networking;
+			sourceTree = "<group>";
+		};
+		EABBF5182704F2B0007C80B8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EABBF5192704F2CC007C80B8 /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 				EA5C6157270108CD00123417 /* ExchangeRatesTableViewController.swift in Sources */,
 				EA82AD3326FE314800E5B1AA /* AppDelegate.swift in Sources */,
 				EA5C614927009B7200123417 /* CurrencyRate.swift in Sources */,
+				EABBF51A2704F2CC007C80B8 /* NetworkManager.swift in Sources */,
 				EA5C614026FF4F3700123417 /* TrumpCitation.swift in Sources */,
 				EA82AD3526FE314800E5B1AA /* SceneDelegate.swift in Sources */,
 				EA5C613B26FF4E6800123417 /* TrumpViewController.swift in Sources */,

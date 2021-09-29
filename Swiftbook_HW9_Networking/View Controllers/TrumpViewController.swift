@@ -14,32 +14,33 @@ class TrumpViewController: UIViewController {
     @IBOutlet var quoteTextField: UILabel!
     
     // MARK: - Private Properties
+    private var trumpsQuote: TrumpsQuote!
+    
+    
+    // MARK: - Overriden functions
     override func viewDidLoad() {
         super.viewDidLoad()
         quoteTextField.text = "Waiting for Mr. Trump"
     }
     
-    //MARK: IB Actions
+    // MARK: IB Actions
     @IBAction func askTrumpButtonPressed() {
-        getPersonalizedQuote()
+        let link = "https://api.whatdoestrumpthink.com/api/v1/quotes/personalized?q=\(nameTextField.text ?? "")"
+        
+        NetworkManager.shared.fetch(dataType: TrumpsQuote.self, from: link) { result in
+            switch result {
+            case .success(let trumpsQuote):
+                self.trumpsQuote = trumpsQuote
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+        getPersonalizedQuote(quote: trumpsQuote)
     }
     
-    //MARK: - Private Methods
-    private func getPersonalizedQuote() {
-        let link = "https://api.whatdoestrumpthink.com/api/v1/quotes/personalized?q=\(nameTextField.text ?? "")"
-        guard let url = URL(string: link ) else { return }
-        
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data else { return }
-            
-            do {
-                let quote = try JSONDecoder().decode(TrumpsQuote.self, from: data)
-                DispatchQueue.main.async {
-                    self.quoteTextField.text = quote.message
-                }
-            } catch let error {
-                print(error.localizedDescription)
-            }
-        }.resume()
+    // MARK: - Private Methods
+    private func getPersonalizedQuote(quote: TrumpsQuote) {
+        quoteTextField.text = quote.message
     }
 }
