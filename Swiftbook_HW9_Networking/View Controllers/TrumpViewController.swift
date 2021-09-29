@@ -13,10 +13,6 @@ class TrumpViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var quoteTextField: UILabel!
     
-    // MARK: - Private Properties
-    private var trumpsQuote: TrumpsQuote!
-    
-    
     // MARK: - Overriden functions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +26,11 @@ class TrumpViewController: UIViewController {
         NetworkManager.shared.fetch(dataType: TrumpsQuote.self, from: link) { result in
             switch result {
             case .success(let trumpsQuote):
-                self.trumpsQuote = trumpsQuote
+                self.getPersonalizedQuote(quote: trumpsQuote)
             case .failure(let error):
                 print(error)
             }
         }
-        
-        getPersonalizedQuote(quote: trumpsQuote)
     }
     
     // MARK: - Private Methods
