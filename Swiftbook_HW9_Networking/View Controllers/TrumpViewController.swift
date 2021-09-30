@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class TrumpViewController: UIViewController {
     
@@ -23,18 +24,30 @@ class TrumpViewController: UIViewController {
     @IBAction func askTrumpButtonPressed() {
         let link = "https://api.whatdoestrumpthink.com/api/v1/quotes/personalized?q=\(nameTextField.text ?? "")"
         
-        NetworkManager.shared.fetch(dataType: TrumpsQuote.self, from: link) { result in
-            switch result {
-            case .success(let trumpsQuote):
+        AF.request(link).validate().responseJSON { dataResponse in
+            switch dataResponse.result {
+            case .success(let quote):
+                guard let trumpsQuote = TrumpsQuote.getQuote(from: quote) else { return }
                 self.getPersonalizedQuote(quote: trumpsQuote)
             case .failure(let error):
                 print(error)
             }
+            }
+    }
+            
+            
+            //        NetworkManager.shared.fetch(dataType: TrumpsQuote.self, from: link) { result in
+            //            switch result {
+            //            case .success(let trumpsQuote):
+            //                self.getPersonalizedQuote(quote: trumpsQuote)
+            //            case .failure(let error):
+            //                print(error)
+            //            }
+            //        }
+        
+        // MARK: - Private Methods
+        private func getPersonalizedQuote(quote: TrumpsQuote) {
+            quoteTextField.text = quote.message
         }
     }
-    
-    // MARK: - Private Methods
-    private func getPersonalizedQuote(quote: TrumpsQuote) {
-        quoteTextField.text = quote.message
-    }
-}
+

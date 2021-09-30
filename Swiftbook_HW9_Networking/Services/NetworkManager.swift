@@ -6,14 +6,15 @@
 //
 
 import Foundation
-
-enum ErrorType: Error {
-    case invalidURL
-    case noData
-    case decodingError
-}
+import Alamofire
 
 class NetworkManager {
+    
+    enum ErrorType: Error {
+        case invalidURL
+        case noData
+        case decodingError
+    }
     
     static let shared = NetworkManager()
     
@@ -35,5 +36,6 @@ class NetworkManager {
             }
         }.resume()
     }
+    
     private init() {}
 }

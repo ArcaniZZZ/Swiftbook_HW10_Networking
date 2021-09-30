@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ExchangeRatesTableViewController: UITableViewController {
     
@@ -18,15 +19,7 @@ class ExchangeRatesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkManager.shared.fetch(dataType: ExchangeRates.self, from: url) { result in
-            switch result {
-            case .success(let exchangeRates):
-                self.exchangeRates = exchangeRates
-                self.tableView.reloadData()
-            case .failure(let error):
-                print(error)
-            }
-        }
+        alamoFireFetch(link: url)
     }
     
     // MARK: - Table view data source
@@ -47,5 +40,19 @@ class ExchangeRatesTableViewController: UITableViewController {
         cell.contentConfiguration = content
         
         return cell
+    }
+    
+    // MARK: - Private Methods
+    func alamoFireFetch(link: String) {
+        AF.request(link)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    self.exchangeRates = ExchangeRates.getCurrency(from: value)
+                case.failure(let error):
+                    print(error)
+            }
+        }
     }
 }

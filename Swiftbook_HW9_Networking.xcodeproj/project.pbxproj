@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B284410D18B665F92189AF0B /* Pods_Swiftbook_HW9_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DA681D674F161388D10092 /* Pods_Swiftbook_HW9_Networking.framework */; };
 		EA5C613B26FF4E6800123417 /* TrumpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C613A26FF4E6800123417 /* TrumpViewController.swift */; };
 		EA5C614026FF4F3700123417 /* TrumpCitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C613F26FF4F3700123417 /* TrumpCitation.swift */; };
 		EA5C614927009B7200123417 /* CurrencyRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C614827009B7200123417 /* CurrencyRate.swift */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40DA681D674F161388D10092 /* Pods_Swiftbook_HW9_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiftbook_HW9_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E195516D7C5C69C711C16EF /* Pods-Swiftbook_HW9_Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftbook_HW9_Networking.debug.xcconfig"; path = "Target Support Files/Pods-Swiftbook_HW9_Networking/Pods-Swiftbook_HW9_Networking.debug.xcconfig"; sourceTree = "<group>"; };
+		9AD94F84086709037A2E8F46 /* Pods-Swiftbook_HW9_Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftbook_HW9_Networking.release.xcconfig"; path = "Target Support Files/Pods-Swiftbook_HW9_Networking/Pods-Swiftbook_HW9_Networking.release.xcconfig"; sourceTree = "<group>"; };
 		EA5C613A26FF4E6800123417 /* TrumpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrumpViewController.swift; sourceTree = "<group>"; };
 		EA5C613F26FF4F3700123417 /* TrumpCitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrumpCitation.swift; sourceTree = "<group>"; };
 		EA5C614827009B7200123417 /* CurrencyRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRate.swift; sourceTree = "<group>"; };
@@ -39,12 +43,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B284410D18B665F92189AF0B /* Pods_Swiftbook_HW9_Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4865A457BA528BF8472B4B5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40DA681D674F161388D10092 /* Pods_Swiftbook_HW9_Networking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92C92ECAD751E48781CEB1FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E195516D7C5C69C711C16EF /* Pods-Swiftbook_HW9_Networking.debug.xcconfig */,
+				9AD94F84086709037A2E8F46 /* Pods-Swiftbook_HW9_Networking.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EA5C613C26FF4E7000123417 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +117,8 @@
 			children = (
 				EA82AD3126FE314800E5B1AA /* Swiftbook_HW9_Networking */,
 				EA82AD3026FE314800E5B1AA /* Products */,
+				92C92ECAD751E48781CEB1FC /* Pods */,
+				4865A457BA528BF8472B4B5B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA82AD4326FE314A00E5B1AA /* Build configuration list for PBXNativeTarget "Swiftbook_HW9_Networking" */;
 			buildPhases = (
+				4B96A49F1EB95BC2694EBE50 /* [CP] Check Pods Manifest.lock */,
 				EA82AD2B26FE314800E5B1AA /* Sources */,
 				EA82AD2C26FE314800E5B1AA /* Frameworks */,
 				EA82AD2D26FE314800E5B1AA /* Resources */,
+				B1258BDBA0FCAD97833B2E06 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +219,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B96A49F1EB95BC2694EBE50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swiftbook_HW9_Networking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1258BDBA0FCAD97833B2E06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swiftbook_HW9_Networking/Pods-Swiftbook_HW9_Networking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swiftbook_HW9_Networking/Pods-Swiftbook_HW9_Networking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swiftbook_HW9_Networking/Pods-Swiftbook_HW9_Networking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA82AD2B26FE314800E5B1AA /* Sources */ = {
@@ -348,6 +417,7 @@
 		};
 		EA82AD4426FE314A00E5B1AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E195516D7C5C69C711C16EF /* Pods-Swiftbook_HW9_Networking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -378,6 +448,7 @@
 		};
 		EA82AD4526FE314A00E5B1AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AD94F84086709037A2E8F46 /* Pods-Swiftbook_HW9_Networking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

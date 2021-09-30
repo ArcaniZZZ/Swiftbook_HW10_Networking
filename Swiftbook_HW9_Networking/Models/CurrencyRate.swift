@@ -15,6 +15,16 @@ struct ExchangeRates: Codable {
         case valute = "Valute"
         case date = "Date"
     }
+    
+    init(currencyInfo: [String: Any]) {
+        valute = currencyInfo["Valute"] as? [String: Currency]
+        date = currencyInfo["Date"] as? String
+    }
+    
+    static func getCurrency(from value: Any) -> ExchangeRates? {
+        guard let exchangeRates = value as? [String: Any] else { return nil }
+        return ExchangeRates(currencyInfo: exchangeRates)
+    }
 }
 
 struct Currency: Codable {
