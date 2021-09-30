@@ -32,22 +32,12 @@ class TrumpViewController: UIViewController {
             case .failure(let error):
                 print(error)
             }
-            }
-    }
-            
-            
-            //        NetworkManager.shared.fetch(dataType: TrumpsQuote.self, from: link) { result in
-            //            switch result {
-            //            case .success(let trumpsQuote):
-            //                self.getPersonalizedQuote(quote: trumpsQuote)
-            //            case .failure(let error):
-            //                print(error)
-            //            }
-            //        }
-        
-        // MARK: - Private Methods
-        private func getPersonalizedQuote(quote: TrumpsQuote) {
-            quoteTextField.text = quote.message
         }
     }
+    
+    // MARK: - Private Methods
+    private func getPersonalizedQuote(quote: TrumpsQuote) {
+        quoteTextField.text = quote.message
+    }
+}
 

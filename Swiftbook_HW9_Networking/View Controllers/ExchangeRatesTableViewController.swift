@@ -18,7 +18,6 @@ class ExchangeRatesTableViewController: UITableViewController {
     // MARK: - Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         alamoFireFetch(link: url)
     }
     
