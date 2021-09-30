@@ -19,6 +19,7 @@ class ExchangeRatesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         alamoFireFetch(link: url)
+        tableView.reloadData()
     }
     
     // MARK: - Table view data source
@@ -43,14 +44,13 @@ class ExchangeRatesTableViewController: UITableViewController {
     
     // MARK: - Private Methods
     func alamoFireFetch(link: String) {
-        AF.request(link)
-            .validate()
-            .responseJSON { dataResponse in
-                switch dataResponse.result {
-                case .success(let value):
-                    self.exchangeRates = ExchangeRates.getCurrency(from: value)
-                case.failure(let error):
-                    print(error)
+        AF.request(link).validate().responseJSON { dataResponse in
+            switch dataResponse.result {
+            case .success(let value):
+                self.exchangeRates = ExchangeRates.getCurrency(from: value)
+                self.tableView.reloadData()
+            case .failure:
+                print("Failed to get currency from AF FUNCTION")
             }
         }
     }
