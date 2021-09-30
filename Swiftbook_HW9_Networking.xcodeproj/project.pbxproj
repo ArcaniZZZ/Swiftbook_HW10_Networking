@@ -64,7 +64,6 @@
 				7E195516D7C5C69C711C16EF /* Pods-Swiftbook_HW9_Networking.debug.xcconfig */,
 				9AD94F84086709037A2E8F46 /* Pods-Swiftbook_HW9_Networking.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -105,13 +104,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		EA5C614C2700BC4800123417 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
 		EA82AD2626FE314800E5B1AA = {
 			isa = PBXGroup;
 			children = (
@@ -134,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				EABBF5182704F2B0007C80B8 /* Services */,
-				EA5C614C2700BC4800123417 /* Cells */,
 				EA5C614126FF4F5F00123417 /* Models */,
 				EA5C613E26FF4EE000123417 /* Storyboards */,
 				EA5C613C26FF4E7000123417 /* View Controllers */,
