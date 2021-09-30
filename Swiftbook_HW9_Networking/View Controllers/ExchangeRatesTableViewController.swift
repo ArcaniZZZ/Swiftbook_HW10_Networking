@@ -19,7 +19,6 @@ class ExchangeRatesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         alamoFireFetch(link: url)
-        tableView.reloadData()
     }
     
     // MARK: - Table view data source
@@ -30,6 +29,7 @@ class ExchangeRatesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CurrencyCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
+        
         content.text = list[indexPath.row]
         
         if let rate = exchangeRates?.valute?[list[indexPath.row]]?.value {
@@ -38,7 +38,6 @@ class ExchangeRatesTableViewController: UITableViewController {
             content.secondaryText = "No data"
         }
         cell.contentConfiguration = content
-        
         return cell
     }
     
@@ -48,7 +47,6 @@ class ExchangeRatesTableViewController: UITableViewController {
             switch dataResponse.result {
             case .success(let value):
                 self.exchangeRates = ExchangeRates.getCurrency(from: value)
-                self.tableView.reloadData()
             case .failure:
                 print("Failed to get currency from AF FUNCTION")
             }
